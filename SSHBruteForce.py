@@ -52,7 +52,7 @@ def sshbf_detect():
             for packet in sessions[session]:
                 try:
                     payload = bytes(packet["TCP"].payload)
-                    if packet['TCP'].sport == 21 and len(payload) < 5000:
+                    if packet['TCP'].sport == 22 and len(payload) < 5000:
                         SSHBF_rule()
                         flag = True
                         break
