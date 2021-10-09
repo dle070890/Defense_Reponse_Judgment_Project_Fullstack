@@ -12,9 +12,9 @@ pcap = rdpcap(pcap_file)
 
 #Generate snort rules 
 def SSHBF_rule(): 
-    if os.path.isfile('/etc/snort/rules/ftpbf.rules') == False: 
-        f = open('/etc/snort/rules/ftpbf.rules', 'x')
-        f = open('/etc/snort/rules/ftpbf.rules', 'w') 
+    if os.path.isfile('/etc/snort/rules/sshbf.rules') == False: 
+        f = open('/etc/snort/rules/sshbf.rules', 'x')
+        f = open('/etc/snort/rules/sshbf.rules', 'w') 
         f.write('-----------------------------------------------------------------------------\n')
         f.write('There might be a brute force in SSH against your network\n This will give you the alert rules and drop rules against SSH brute force\n')
         f.write('-----------------------------------------------------------------------------\n')
@@ -37,7 +37,7 @@ def SSHBF_rule():
         print(file_contents_created)
         f.close()   
     else:
-        f = open('/etc/snort/rules/ftpbf.rules', 'r') #
+        f = open('/etc/snort/rules/sshbf.rules', 'r') #
         file_contents = f.read()
         print(file_contents)
         f.close()
