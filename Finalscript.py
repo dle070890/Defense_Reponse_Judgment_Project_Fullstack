@@ -85,7 +85,8 @@ def ftpbf_detect():
                     pass
 
     if flag == False: 
-        print ("There is no FTP brute force")
+        print ("\nThere is no FTP brute force\n\n-----------\n")
+ftpbf_detect()
         
 #looking at the packet size - if the bytes in the packet size that the server sends back to the client is less than 5kb it is considered a failed SSH Brute Force attempt and we will generate snort rules (https://resources.infosecinstitute.com/category/certifications-training/network-traffic-analysis-for-incident-response/how-to-use-traffic-analysis-for-wireshark/ssh-protocol-with-wireshark/)
 def sshbf_detect():
@@ -105,5 +106,4 @@ def sshbf_detect():
                 
     if flag == False: 
         print ("There is no SSH brute force")
-ftpbf_detect()
 sshbf_detect()
